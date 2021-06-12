@@ -1,0 +1,26 @@
+{
+  "name": "nuxt-app",
+  "version": "1.0.0",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .vue,.js --fix --ignore-path .gitignore ."
+  },
+  "engines": {
+    "node": "14",
+    "yarn": "1"
+  },
+  "dependencies": {
+    "core-js": "^3.13.0",
+    "nuxt": "^2.15.6"
+  },
+  "devDependencies": {
+    "eslint": "^7.27.0",
+    "eslint-config-xo-space": "^0.27.0",
+    "eslint-plugin-vue": "^7.9.0",
+    "nuxt-windicss": "^0.8.2"
+  }
+}
