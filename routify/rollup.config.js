@@ -9,7 +9,6 @@ import {spassr} from 'spassr';
 import getConfig from '@roxi/routify/lib/utils/config';
 import autoPreprocess from 'svelte-preprocess';
 import postcssImport from 'postcss-import';
-import {injectManifest} from 'rollup-plugin-workbox';
 // A import windiCSS from 'rollup-plugin-windicss';
 import css from 'rollup-plugin-css-only';
 import {windi} from 'svelte-windicss-preprocess';
@@ -83,14 +82,6 @@ export default {
         map: {mappings: ''}
       })
     },
-    injectManifest({
-      globDirectory: assetsDir,
-      globPatterns: ['**/*.{js,css,svg}', '__app.html'],
-      swSrc: 'src/sw.js',
-      swDest: `${distDir}/serviceworker.js`,
-      maximumFileSizeToCacheInBytes: 10000000, // 10 MB,
-      mode: 'production'
-    }),
     production && copyToDist()
   ],
   watch: {
