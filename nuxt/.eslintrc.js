@@ -5,7 +5,7 @@ module.exports = {
   },
   extends: [
     'plugin:vue/strongly-recommended',
-    'xo-space/esnext'
+    'xo-space'
   ],
   parserOptions: {
     ecmaVersion: 12,

@@ -4,7 +4,7 @@ module.exports = {
     es2021: true
   },
   extends: [
-    'xo-space/esnext'
+    'xo-space'
   ],
   parserOptions: {
     ecmaVersion: 12,
