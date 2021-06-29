@@ -1,6 +1,6 @@
-import { render } from "solid-js/web";
+import {render} from 'solid-js/web';
 
-import App from "./App";
-import 'virtual:windi.css'
+import App from './App';
+import 'virtual:windi.css';
 
-render(App, document.getElementById("root"));
+render(App, document.getElementById('root'));
