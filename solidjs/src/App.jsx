@@ -164,7 +164,7 @@ function App() {
             <div class="py-4">
               <p class="text-sm text-center">
                 &copy; 2021 <a
-                  href="https://www.reinaldyrafli.com/"
+                  href="https://cpde.reinaldyrafli.com/"
                   class="underline hover:no-underline hover:text-blue-800 dark:hover:text-blue-200"
                 >Reinaldy Rafli</a>
               </p>

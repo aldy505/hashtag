@@ -4,9 +4,8 @@
   "license": "GPL-3.0-or-later",
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
+    "build": "nuxt generate",
     "lint": "eslint --ext .vue,.js --fix --ignore-path .gitignore ."
   },
   "engines": {

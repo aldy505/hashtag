@@ -6,6 +6,7 @@ I created this repo (initially, a separate one just on my local computer) just t
 
 * [Nuxt](https://nuxtjs.org/) is a SSR/SSG Vue-based framework
 * [Routify](https://routify.dev/) is a SSR/SSG Svelte-based framework
+* [Solid JS](https://www.solidjs.com/) is pure fast reactive library (having React-like syntax)
 
 The stack:
 * The framework (Nuxt/Routify)
@@ -14,22 +15,8 @@ The stack:
 
 ## Setup Guide
 
-### Nuxt
-```bash
-# install dependency
-yarn
+All frameworks (should) have the same commands, so everything would be easy.
 
-# run local dev server
-yarn dev
-
-# run eslint (with xo-config-space) if you want
-yarn lint
-
-# build into static site
-yarn generate
-```
-
-### Routify
 ```bash
 # install dependency
 yarn
