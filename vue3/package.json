@@ -1,0 +1,24 @@
+{
+  "name": "vue3-app",
+  "version": "1.0.0",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "lint": "eslint --ext .vue,.js --fix --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "vue": "^3.0.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.2.3",
+    "@vue/compiler-sfc": "^3.0.5",
+    "eslint": "^7.29.0",
+    "eslint-config-xo-space": "^0.28.0",
+    "eslint-plugin-vue": "^7.12.1",
+    "vite": "^2.3.8",
+    "vite-plugin-windicss": "^1.2.0",
+    "windicss": "^3.1.3"
+  }
+}

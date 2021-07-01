@@ -1,0 +1,59 @@
+  
+name: CI
+
+on:
+  push:
+    branches: [ "*" ]
+  pull_request:
+    branches: [ "*" ]
+
+jobs:
+  vue3:
+    name: Vue 3
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./vue3
+
+    strategy:
+      fail-fast: false
+       
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@master
+
+      - name: Setup nodejs
+        uses: actions/setup-node@v2.1.4
+        with:
+          node-version: 14
+
+      - name: Get yarn cache directory path 🛠
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Cache node_modules 📦
+        uses: actions/cache@v2
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+  
+      - name: Installling dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: yarn 
+
+      - name: Lint
+        run: yarn run lint
+      
+      - name: Build
+        run: yarn run build
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v1
+        with:
+          languages: javascript
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v1
