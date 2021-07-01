@@ -1,12 +1,15 @@
-# Nuxt.js vs Routify
+# Hashtag - Implementation of frameworks
 
 Right, so.. let's get to the point.
 
 I created this repo (initially, a separate one just on my local computer) just to learn Svelte. By copying all the stuff I did with Nuxt and changing some stuff along the way to make it work. But, it turns out, I think it's a pretty good comparison on basic things you can do with any other framework. You can see the actual app (with the proper hashtags) [here](https://hashtag.reinaldyrafli.com/)
 
+But, now it seems like the mini version of Realworld's front end, but it's just a single page app of random hashtag generation. Other than that, one interesting thing we can take from this is the build time comparison on Github Actions, as it would be the most realistic one, it's running on the cloud.
+
 * [Nuxt](https://nuxtjs.org/) is a SSR/SSG Vue-based framework
 * [Routify](https://routify.dev/) is a SSR/SSG Svelte-based framework
 * [Solid JS](https://www.solidjs.com/) is pure fast reactive library (having React-like syntax)
+* [Vue 3](https://v3.vuejs.org/) is literally Vue 3. What do you expect?
 
 The stack:
 * The framework (Nuxt/Routify)
