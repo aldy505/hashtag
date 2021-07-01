@@ -116,7 +116,7 @@ export default {
         this.hashtagsCopied = array.length;
         this.copySuccess = true;
       } catch (error) {
-        this.copyFailed = false;
+        this.copyFailed = true;
         this.$rollbar.error(error);
       }
     },
@@ -129,7 +129,7 @@ export default {
         this.hashtagsCopied = array.length;
         this.copySuccess = true;
       } catch (error) {
-        this.copyFailed = false;
+        this.copyFailed = true;
         this.$rollbar.error(error);
       }
     },

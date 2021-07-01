@@ -32,7 +32,7 @@ function App() {
       setHashtagsCopied(array.length);
       setCopySuccess(true);
     } catch (error) {
-      setCopyFailed(false);
+      setCopyFailed(true);
       console.error(error);
     }
   }
@@ -46,7 +46,7 @@ function App() {
       setHashtagsCopied(array.length);
       setCopySuccess(true);
     } catch (error) {
-      setCopyFailed(false);
+      setCopyFailed(true);
       console.error(error);
     }
   }

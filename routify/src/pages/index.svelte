@@ -31,7 +31,7 @@
       hashtagsCopied = array.length;
       copySuccess = true;
     } catch (error) {
-      copyFailed = false;
+      copyFailed = true;
       console.error(error);
     }
   }
@@ -45,7 +45,7 @@
       hashtagsCopied = array.length;
       copySuccess = true;
     } catch (error) {
-      copyFailed = false;
+      copyFailed = true;
       console.error(error);
     }
   }
