@@ -9,8 +9,8 @@
     "lint": "eslint --ext .vue,.js --fix --ignore-path .gitignore ."
   },
   "engines": {
-    "node": "14",
-    "yarn": "1"
+    "node": ">=14.x",
+    "yarn": ">=1.x"
   },
   "dependencies": {
     "core-js": "^3.13.0",
