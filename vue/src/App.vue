@@ -1,80 +1,82 @@
 <template>
-  <div class="container mx-auto font-inter dark:bg-gray-900 dark:text-white">
-    <div class="min-h-screen lg:py-12 md:py-8 py-4 lg:px-24 md:px-12 sm:px-6 px-3">
-      <h1 class="text-4xl font-bold">
-        Paste your hashtags here!
-      </h1>
-      <div class="py-4">
-        <textarea
-          @focus="resetAlert"
-          v-model="hashtags"
-          cols="30"
-          rows="10"
-          class="w-full border-2 border-blue-500 dark:border-blue-400 px-4 py-2 rounded-xl ring-1 bg-gray-200 dark:bg-gray-900 focus:bg-white dark:focus:bg-gray-800"
-        >
+  <div class="font-inter dark:bg-gray-900 dark:text-white">
+    <div class="container mx-auto">
+      <div class="min-h-screen lg:py-12 md:py-8 py-4 lg:px-24 md:px-12 sm:px-6 px-3">
+        <h1 class="text-4xl font-bold">
+          Paste your hashtags here!
+        </h1>
+        <div class="py-4">
+          <textarea
+            @focus="resetAlert"
+            v-model="hashtags"
+            cols="30"
+            rows="10"
+            class="w-full border-2 border-blue-500 dark:border-blue-400 px-4 py-2 rounded-xl ring-1 bg-gray-200 dark:bg-gray-900 focus:bg-white dark:focus:bg-gray-800"
+          >
           Put your hashtags here...
         </textarea>
-        <p class="pt-6 px-4">
-          or pick from a preset below..
-        </p>
-        <div class="py-4 flex flex-row">
-          <div
-            class="flex-1 px-4"
-            v-for="item in collections"
-            :key="item.id"
-          >
-            <button
-              class="w-full px-4 py-2 border-2 border-emerald-500 dark:border-emerald-400 rounded-xl hover:bg-emerald-700 dark:hover:bg-emerald-400 hover:text-white text-emerald-700 dark:text-emerald-400"
-              @click="addToText(item.hashtags)"
-            >
-              {{ item.name }}
-            </button>
-          </div>
-        </div>
-        <p class="pt-6 px-4">
-          A tip: 30 hashtags is for feed or IGTV related posts, 10 hashtags is for stories!
-        </p>
-        <div class="py-4 flex flex-row">
-          <div class="flex-1 px-4">
-            <button
-              class="w-full px-4 py-2 border-2 border-blue-500 dark:border-blue-400 rounded-xl hover:bg-blue-700 dark:hover:bg-blue-400 hover:text-white text-blue-700 dark:text-blue-400"
-              @click="copy30"
-            >
-              Copy 30 hashtags
-            </button>
-          </div>
-          <div class="flex-1 px-4">
-            <button
-              class="w-full px-4 py-2 border-2 border-blue-500 dark:border-blue-400 rounded-xl hover:bg-blue-700 dark:hover:bg-blue-400 hover:text-white text-blue-700 dark:text-blue-400"
-              @click="copy10"
-            >
-              Copy 10 hashtags
-            </button>
-          </div>
-        </div>
-        <div class="py-4">
-          <div
-            v-show="copySuccess"
-            @click="resetAlert"
-            class="rounded-xl w-full text-lg px-6 py-4 bg-green-700 dark:bg-green-600 text-white"
-          >
-            😎 {{ hashtagsCopied }} hashtags copied! (click/tap to dismiss)
-          </div>
-          <div
-            v-show="copyFailed"
-            @click="resetAlert"
-            class="rounded-xl w-full text-lg px-6 py-4 bg-red-700 dark:bg-red-600 text-white"
-          >
-            😖 Oh no! Failed to copy those hashtags! (click/tap to dismiss)
-          </div>
-        </div>
-        <div class="py-4">
-          <p class="text-sm text-center">
-            &copy; 2021 <a
-              href="https://cpde.reinaldyrafli.com/"
-              class="underline hover:no-underline hover:text-blue-800 dark:hover:text-blue-200"
-            >Reinaldy Rafli</a>
+          <p class="pt-6 px-4">
+            or pick from a preset below..
           </p>
+          <div class="py-4 flex flex-row">
+            <div
+              class="flex-1 px-4"
+              v-for="item in collections"
+              :key="item.id"
+            >
+              <button
+                class="w-full px-4 py-2 border-2 border-emerald-500 dark:border-emerald-400 rounded-xl hover:bg-emerald-700 dark:hover:bg-emerald-400 hover:text-white text-emerald-700 dark:text-emerald-400"
+                @click="addToText(item.hashtags)"
+              >
+                {{ item.name }}
+              </button>
+            </div>
+          </div>
+          <p class="pt-6 px-4">
+            A tip: 30 hashtags is for feed or IGTV related posts, 10 hashtags is for stories!
+          </p>
+          <div class="py-4 flex flex-row">
+            <div class="flex-1 px-4">
+              <button
+                class="w-full px-4 py-2 border-2 border-blue-500 dark:border-blue-400 rounded-xl hover:bg-blue-700 dark:hover:bg-blue-400 hover:text-white text-blue-700 dark:text-blue-400"
+                @click="copy30"
+              >
+                Copy 30 hashtags
+              </button>
+            </div>
+            <div class="flex-1 px-4">
+              <button
+                class="w-full px-4 py-2 border-2 border-blue-500 dark:border-blue-400 rounded-xl hover:bg-blue-700 dark:hover:bg-blue-400 hover:text-white text-blue-700 dark:text-blue-400"
+                @click="copy10"
+              >
+                Copy 10 hashtags
+              </button>
+            </div>
+          </div>
+          <div class="py-4">
+            <div
+              v-show="copySuccess"
+              @click="resetAlert"
+              class="rounded-xl w-full text-lg px-6 py-4 bg-green-700 dark:bg-green-600 text-white"
+            >
+              😎 {{ hashtagsCopied }} hashtags copied! (click/tap to dismiss)
+            </div>
+            <div
+              v-show="copyFailed"
+              @click="resetAlert"
+              class="rounded-xl w-full text-lg px-6 py-4 bg-red-700 dark:bg-red-600 text-white"
+            >
+              😖 Oh no! Failed to copy those hashtags! (click/tap to dismiss)
+            </div>
+          </div>
+          <div class="py-4">
+            <p class="text-sm text-center">
+              &copy; 2021 <a
+                href="https://cpde.reinaldyrafli.com/"
+                class="underline hover:no-underline hover:text-blue-800 dark:hover:text-blue-200"
+              >Reinaldy Rafli</a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
