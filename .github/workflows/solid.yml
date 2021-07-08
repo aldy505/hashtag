@@ -8,12 +8,12 @@ on:
     branches: [ "*" ]
 
 jobs:
-  vue3:
-    name: Vue 3
+  solidjs:
+    name: Solid
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./vue3
+        working-directory: ./solid
 
     strategy:
       fail-fast: false
