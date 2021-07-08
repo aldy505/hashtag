@@ -1,0 +1,23 @@
+{
+  "name": "solidjs-app",
+  "version": "1.0.0",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint --ext .jsx,.js --fix --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "solid-js": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.29.0",
+    "eslint-config-xo-space": "^0.28.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "vite": "^2.3.8",
+    "vite-plugin-solid": "^2.0.0",
+    "vite-plugin-windicss": "^1.1.1",
+    "windicss": "^3.1.3"
+  }
+}
