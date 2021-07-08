@@ -1,12 +1,13 @@
+import {defineConfig} from 'windicss/helpers';
 
-module.exports = {
+export default defineConfig({
   darkMode: 'media',
   theme: {
     extend: {
       fontFamily: {
         limelight: 'Limelight',
-        inter: 'Inter'
-      }
-    }
-  }
-};
+        inter: 'Inter',
+      },
+    },
+  },
+});

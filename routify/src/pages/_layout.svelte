@@ -9,7 +9,7 @@
     baseURL: 'https://hashtag.reinaldyrafli.com',
     themeColor: '#f9fafb',
     siteLocale: 'en_US',
-    myName: 'Reinaldy Rafli'
+    myName: 'Reinaldy Rafli',
   };
 
   metatags.title = metaConfig.siteName;

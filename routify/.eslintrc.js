@@ -1,25 +1,25 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
   },
   extends: [
-    'xo-space'
+    'xo-space',
   ],
   parserOptions: {
     ecmaVersion: 12,
-    sourceType: 'module'
+    sourceType: 'module',
   },
   plugins: [
-    'svelte3'
+    'svelte3',
   ],
   overrides: [
     {
       files: ['*.svelte'],
-      processor: 'svelte3/svelte3'
-    }
+      processor: 'svelte3/svelte3',
+    },
   ],
   rules: {
-    'no-multiple-empty-lines': ['off']
-  }
+    'no-multiple-empty-lines': ['off'],
+  },
 };
