@@ -7,11 +7,11 @@ export default {
   head: {
     title: 'Hashtags - Generate Random Hashtags',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'en',
     },
     meta: [
       {charset: 'utf-8'},
-      {name: 'viewport', content: 'width=device-width, initial-scale=1'}
+      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
     ],
     link: [
       {rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg'},
@@ -19,8 +19,8 @@ export default {
       {rel: 'alternate icon', href: '/favicon.ico'},
       {rel: 'preconnect', href: 'https://fonts.gstatic.com'},
       {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;700'},
-      {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Limelight'}
-    ]
+      {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Limelight'},
+    ],
   },
   publicRuntimeConfig: {
     siteName: 'Hashtags - Generate Random Hashtags',
@@ -29,7 +29,7 @@ export default {
     baseURL: 'https://hashtag.reinaldyrafli.com',
     themeColor: '#f9fafb',
     siteLocale: 'en_US',
-    myName: 'Reinaldy Rafli'
+    myName: 'Reinaldy Rafli',
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
@@ -37,7 +37,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    {src: '@/plugins/clipboard.js', mode: 'client'}
+    {src: '@/plugins/clipboard.js', mode: 'client'},
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -46,7 +46,7 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     'nuxt-windicss',
-    'nuxt-vite'
+    'nuxt-vite',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -54,5 +54,5 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
 };

@@ -33,10 +33,10 @@ export default {
         {name: 'twitter:creator', content: this.$config.myName},
         {name: 'twitter:title', content: this.$config.siteName},
         {name: 'twitter:description', content: this.$config.siteDescription},
-        {name: 'twitter:image', content: this.$config.siteImage}
-      ]
+        {name: 'twitter:image', content: this.$config.siteImage},
+      ],
     };
-  }
+  },
 };
 </script>
 

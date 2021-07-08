@@ -7,8 +7,8 @@ export default defineConfig({
     extend: {
       fontFamily: {
         limelight: 'Limelight',
-        inter: 'Inter'
-      }
-    }
-  }
+        inter: 'Inter',
+      },
+    },
+  },
 });
