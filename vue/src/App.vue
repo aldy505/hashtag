@@ -121,7 +121,7 @@ export default {
         this.copySuccess = true;
       } catch (error) {
         this.copyFailed = true;
-        this.$rollbar.error(error);
+        console.error(error);
       }
     },
     async copy10() {
@@ -134,7 +134,7 @@ export default {
         this.copySuccess = true;
       } catch (error) {
         this.copyFailed = true;
-        this.$rollbar.error(error);
+        console.error(error);
       }
     },
     addToText(hashtags) {
