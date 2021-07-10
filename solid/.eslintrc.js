@@ -13,9 +13,7 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: [
-    // 'jsx-a11y',
-  ],
+  plugins: [],
   rules: {
     'new-cap': ['off'],
   },

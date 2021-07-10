@@ -14,7 +14,6 @@
   "devDependencies": {
     "eslint": "^7.30.0",
     "eslint-config-xo-space": "^0.28.0",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
     "vite": "^2.4.1",
     "vite-plugin-solid": "^2.0.0",
     "vite-plugin-windicss": "^1.2.4",
