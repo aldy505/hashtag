@@ -88,7 +88,9 @@
         Paste your hashtags here!
       </h1>
       <div class="py-4">
-        <textarea on:focus="{() => { resetAlert(); }}" bind:value="{hashtags}" cols="30" rows="10"
+        <textarea on:focus="{() => {
+ resetAlert();
+}}" bind:value="{hashtags}" cols="30" rows="10"
           class="w-full border-2 border-blue-500 dark:border-blue-400 px-4 py-2 rounded-xl ring-1 bg-gray-200 dark:bg-gray-900 focus:bg-white dark:focus:bg-gray-800" />
         <p class="pt-6 px-4">
           or pick from a preset below..
@@ -100,7 +102,9 @@
           >
             <button
               class="w-full px-4 py-2 border-2 border-emerald-500 dark:border-emerald-400 rounded-xl hover:bg-emerald-700 dark:hover:bg-emerald-400 hover:text-white text-emerald-700 dark:text-emerald-400"
-              on:click="{() => { addToText(item.hashtags); }}"
+              on:click="{() => {
+ addToText(item.hashtags);
+}}"
             >
               { item.name }
               </button>
@@ -114,7 +118,9 @@
           <div class="flex-1 px-4">
           <button
               class="w-full px-4 py-2 border-2 border-blue-500 dark:border-blue-400 rounded-xl hover:bg-blue-700 dark:hover:bg-blue-400 hover:text-white text-blue-700 dark:text-blue-400"
-              on:click="{() => { copy30(); }}"
+              on:click="{() => {
+ copy30();
+}}"
           >
               Copy 30 hashtags
           </button>
@@ -122,7 +128,9 @@
           <div class="flex-1 px-4">
           <button
               class="w-full px-4 py-2 border-2 border-blue-500 dark:border-blue-400 rounded-xl hover:bg-blue-700 dark:hover:bg-blue-400 hover:text-white text-blue-700 dark:text-blue-400"
-              on:click="{() => { copy10(); }}"
+              on:click="{() => {
+ copy10();
+}}"
           >
               Copy 10 hashtags
           </button>
@@ -132,7 +140,9 @@
         {#if copySuccess}
           <div
           v-show="copySuccess"
-          on:click="{() => { resetAlert(); }}"
+          on:click="{() => {
+ resetAlert();
+}}"
           class="rounded-xl w-full text-lg px-6 py-4 bg-green-700 dark:bg-green-600 text-white"
           >
           😎 { hashtagsCopied } hashtags copied! (click/tap to dismiss)
@@ -141,7 +151,9 @@
         {#if copyFailed}
           <div
           v-show="copyFailed"
-          on:click="{() => { resetAlert(); }}"
+          on:click="{() => {
+ resetAlert();
+}}"
           class="rounded-xl w-full text-lg px-6 py-4 bg-red-700 dark:bg-red-600 text-white"
           >
           😖 Oh no! Failed to copy those hashtags! (click/tap to dismiss)
